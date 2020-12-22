@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon app",
-    "build": "npm run build"
+    "build": "netlify-lambda build express"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

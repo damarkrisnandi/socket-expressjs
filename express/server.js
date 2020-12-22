@@ -22,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+const router = express.Router();
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 const server = app.listen(3000);
 var io = require('socket.io')(server);
